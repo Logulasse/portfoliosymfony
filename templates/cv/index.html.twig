@@ -15,7 +15,7 @@
                 <h1>CV</h1>
             </div>
             <div class="col-2">
-                <a href="/files/cv.pdf">
+                <a href="{{ cv_path }}">
                     <button type="button" class="btn btn-light">
                         Télécharger
                     </button>
@@ -23,7 +23,7 @@
             </div>
         </div>
     </div>
-    <embed type="application/pdf" src="/files/cv.pdf" width="800" height="1190">
+    <embed type="application/pdf" src="{{ cv_path }}" width="800" height="1190">
 </div>
 
 {% endblock %}
