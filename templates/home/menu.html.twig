@@ -2,10 +2,10 @@
 
 {% block title %}Hello HomeController!{% endblock %}
 
-{% block body %}
+{% block menu %}
 <style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+  .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+  .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
 <div class="container">
@@ -17,13 +17,22 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="/">Accueil</a>
-          <a class="nav-link" href="/cv">CV</a>
-          <a class="nav-link" href="/projects">Projets</a>
-          <a class="nav-link" href="/contact">Contact</a>
+        {% for menu in menus %}
+          <a class="nav-link" href="{{ path(menu.pathName) }}">{{ menu.name }}</a>
+        {% endfor %}
         </div>
       </div>
+      {% if app.user %}
+      <div class="logout navbar-nav">
+        <a class="nav-link" href="{{ path('app_logout') }}">Deconnexion</a>
+      </div>
+      {% else %}
+        <div class="logout navbar-nav">
+          <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+        </div>
+      {% endif  %}
     </div>
   </nav>
 </div>
+{% block body %}{% endblock %}
 {% endblock %}

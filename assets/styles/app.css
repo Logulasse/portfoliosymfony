@@ -1,3 +1,11 @@
 body {
     background-color: lightgray;
 }
+
+.divLoginButtonSubmit{
+    padding-top: 10px;
+}
+
+.logout div{
+    width: 100%;
+}

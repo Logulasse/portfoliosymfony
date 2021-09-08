@@ -32,6 +32,11 @@ class Menu
      */
     private $path;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $pathName;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Menu
     public function setPath(string $path): self
     {
         $this->path = $path;
+
+        return $this;
+    }
+
+    public function getPathName(): ?string
+    {
+        return $this->pathName;
+    }
+
+    public function setPathName(string $pathName): self
+    {
+        $this->pathName = $pathName;
 
         return $this;
     }
