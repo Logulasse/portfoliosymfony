@@ -22,6 +22,15 @@
         {% endfor %}
         </div>
       </div>
+      {% if app.user %}
+      <div class="logout navbar-nav">
+        <a class="nav-link" href="{{ path('app_logout') }}">Deconnexion</a>
+      </div>
+      {% else %}
+        <div class="logout navbar-nav">
+          <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+        </div>
+      {% endif  %}
     </div>
   </nav>
 </div>
