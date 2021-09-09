@@ -1,5 +1,23 @@
 body {
     background-color: lightgray;
+    background-image: url('../../public/pictures/IMG_0329.jpeg');
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.containerMenu{
+    opacity: 0.90;
+    transition: 0.5s;
+}
+
+.containerMenu:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.navbarRadius{
+    border-radius: 10px;
 }
 
 .divLoginButtonSubmit{
