@@ -9,12 +9,46 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Contact</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/maxencetasse/Documents/Documents - MacBook Pro de Maxence/Developpement/portfoliosymfony/src/Controller/ContactController.php'|file_link(0) }}">src/Controller/ContactController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/maxencetasse/Documents/Documents - MacBook Pro de Maxence/Developpement/portfoliosymfony/templates/contact/index.html.twig'|file_link(0) }}">templates/contact/index.html.twig</a></code></li>
-    </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-10">
+                <h1>Contact</h1>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="mb-3">
+                <label for="contactLastName" class="form-label">Nom : </label>
+                <input id="contactLastName" class="form-control" type="text" aria-label="lastname">
+            </div>
+        </div>
+        <div class="row">
+            <div class="mb-3">
+                <label for="contactFirstName" class="form-label">Prénom : </label>
+                <input id="contactFirstName" class="form-control" type="text" aria-label="firstname">
+            </div>
+        </div>
+        <div class="row">
+            <div class="mb-3">
+                <label for="contactEmail" class="form-label">Email : </label>
+                <input id="contactEmail" class="form-control" type="email" aria-label="email" placeholder="name@example.com">
+            </div>
+        </div>
+        <div class="row">
+            <div class="mb-3">
+                <label for="contactText" class="form-label">Votre texte : </label>
+                <textarea id="contactText" class="form-control" rows="8"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-light">
+                    Envoyer
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

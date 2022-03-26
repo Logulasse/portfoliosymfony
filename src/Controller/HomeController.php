@@ -20,7 +20,7 @@ class HomeController extends AbstractController
             throw $this->createNotFoundException('Erreur ! Aucun menu trouvé dans la base de données !');
         }
 
-        return $this->render('home/menu.html.twig', [
+        return $this->render('home/index.html.twig', [
             'menus' => $menus,
             'controller_name' => 'HomeController',
         ]);

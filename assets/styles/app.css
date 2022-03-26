@@ -2,6 +2,40 @@ body {
     background-color: lightgray;
 }
 
+.bodyBackground{
+    background-image: url('../../public/pictures/IMG_0329.jpeg');
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.containerMenu{
+    opacity: 0.90;
+    transition: 0.5s;
+}
+
+.containerMenu:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.containerPresentation{
+    padding: 20px;
+    vertical-align: center;
+    margin-top: 100px;
+    border-radius: 10px;
+    min-width: auto;
+    width: 450px;
+}
+
+.rowWhite{
+    color: white;
+}
+
+.navbarRadius{
+    border-radius: 10px;
+}
+
 .divLoginButtonSubmit{
     padding-top: 10px;
 }
